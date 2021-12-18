@@ -45,11 +45,16 @@
 					<div id="main">
 						<div class="inner">
 							<h1>A Hack&Slash idea</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<span class="image main"><img src="./images/ue4-hackslash(1).png" alt="" /></span>
 							<p>Expanding upon my existing knowledge of Unreal Engine, I took a course from Udemy in Programming for Video Games in C++ and started creating a concept Hack&Slash video game.</p>
 							<p>The main character is a knight that gets displaced through time and has to travel through different time periods to return to his own time.</p>
 							<p>In this project, my main focus was building the game from the ground up using C++ only, instead of relying on Blueprints solely. When using C++ in Unreal Engine, you can write in anything the Blueprints can do with nodes. Even though that gives us flexibility, it's still prefered to use Blueprints, because, as the name implies, Blueprints are pre-written functions, so it saves on time when you don't need to rework/rewrite everything.</p>
 							<p>The project was built using the experimental build of Rider for Unreal Engine in Unreal Engine 4.28.</p>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(2).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(3).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(4).png" alt="" /></span></div>
+							</div>
 						</div>
 					</div>
 
@@ -98,6 +103,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.min.js">
+				window.onload = function() {
+					// Intensify all images on the page.
+					var elements = document.querySelectorAll( '.col-4' );
+					Intense( elements );
+				}
+			</script>
 
 	</body>
 </html>

@@ -44,10 +44,16 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>A Hack&Slash idea</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>During my Academic education, I had the chance to take a course in VR Game Development. In that course, we had to create a whole VR Game demo with unique mechanics.</p>
-							<p>The main character has some sort of </p>
+							<h1>VR Anxiety and Horror</h1>
+							<span class="image main"><img src="./images/ue4-horror-game1.png" alt="" /></span>
+							<p>During my Academic education, I had the chance to take a course in VR Game Development. We were given the entire courses' duration to create a VR Game demo, mechanics included.</p>
+							<p>The main character has to go on about their day by avoiding sudden changes in the environment and, if they do happen, find a place to rest and relax, before continuing on. Your job is to go through their entire day, starting from the shortest path they take up to re-living the entire day.</p>
+							<p>The demo was made in Unreal Engine 4.26. The props are assets used from the Unreal Engine store. Scripting was done using the Blueprints system only, as to save on time needed to create a small demo.</p>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-horror-game4.png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-horror-game2.png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/ue4-horror-game3.png" alt="" /></span></div>
+							</div>
 						</div>
 					</div>
 
@@ -96,6 +102,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.min.js">
+				window.onload = function() {
+					// Intensify all images on the page.
+					var elements = document.querySelectorAll( '.col-4' );
+					Intense( elements );
+				}
+			</script>
 
 	</body>
 </html>

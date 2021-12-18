@@ -45,8 +45,15 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Blender knowledge refurbishing</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Ever since the start of my Academic education, I was interested in 3D modelling and general 3D art/design.</p>
+							<span class="image main"><img src="images/blender-(4).png" alt="" /></span>
+							<p>Ever since the start of my Academic education, I was interested in 3D modelling and general 3D art/design. Most of my academic knowledge lies in Autodesk Maya, but due to various technical issues with the newer versions of Maya I've had and with the many scripts I had to use, I decided to move onto Blender.</p>
+							<p>The main technical reason for my move was the way Maya interpreted Water Simulation animations for implementation as objects in Unreal Engine. The simulation in Maya lacked bones for Vec3 geometry in Unreal and has quite a few lagspikes even post optimization. The simulation in Blender had bones for Vec3 geometry and fewer lagspikes when used in a level as a background object.</p>
+							<p>It was initially hard to move over due to the slightly different command palette, but one crash course and a couple of tutorials later and here we are. The best thing I've noticed straight off was that many of the scripts I had on Maya were already implemented functions in Blender.</p>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="./images/blender-(1).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/blender-(2).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="./images/blender-(3).jpg" alt="" /></span></div>
+							</div>
 						</div>
 					</div>
 
@@ -95,6 +102,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.min.js">
+				window.onload = function() {
+					// Intensify all images on the page.
+					var elements = document.querySelectorAll( '.col-4' );
+					Intense( elements );
+				}
+			</script>
 
 	</body>
 </html>
