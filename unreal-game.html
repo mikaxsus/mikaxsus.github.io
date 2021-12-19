@@ -12,7 +12,15 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="favicon.png" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
 	</head>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -51,9 +59,9 @@
 							<p>In this project, my main focus was building the game from the ground up using C++ only, instead of relying on Blueprints solely. When using C++ in Unreal Engine, you can write in anything the Blueprints can do with nodes. Even though that gives us flexibility, it's still prefered to use Blueprints, because, as the name implies, Blueprints are pre-written functions, so it saves on time when you don't need to rework/rewrite everything.</p>
 							<p>The project was built using the experimental build of Rider for Unreal Engine in Unreal Engine 4.28.</p>
 							<div class="row gtr-uniform">
-								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(2).png" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(3).png" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="./images/ue4-hackslash(4).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/ue4-hackslash(2).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/ue4-hackslash(3).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/ue4-hackslash(4).png" alt="" /></span></div>
 							</div>
 						</div>
 					</div>
@@ -97,19 +105,12 @@
 
 			</div>
 
-		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/intense.min.js">
-				window.onload = function() {
-					// Intensify all images on the page.
-					var elements = document.querySelectorAll( '.col-4' );
-					Intense( elements );
-				}
-			</script>
-
+			<script src="assets/js/intense.js"></script>
+			
 	</body>
 </html>

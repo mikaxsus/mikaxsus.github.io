@@ -12,7 +12,15 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="favicon.png" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
 	</head>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -50,9 +58,9 @@
 							<p>The main technical reason for my move was the way Maya interpreted Water Simulation animations for implementation as objects in Unreal Engine. The simulation in Maya lacked bones for Vec3 geometry in Unreal and has quite a few lagspikes even post optimization. The simulation in Blender had bones for Vec3 geometry and fewer lagspikes when used in a level as a background object.</p>
 							<p>It was initially hard to move over due to the slightly different command palette, but one crash course and a couple of tutorials later and here we are. The best thing I've noticed straight off was that many of the scripts I had on Maya were already implemented functions in Blender.</p>
 							<div class="row gtr-uniform">
-								<div class="col-4"><span class="image fit"><img src="./images/blender-(1).png" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="./images/blender-(2).png" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="./images/blender-(3).jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/blender-(1).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/blender-(2).png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/blender-(3).jpg" alt="" /></span></div>
 							</div>
 						</div>
 					</div>
@@ -102,13 +110,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/intense.min.js">
-				window.onload = function() {
-					// Intensify all images on the page.
-					var elements = document.querySelectorAll( '.col-4' );
-					Intense( elements );
-				}
-			</script>
+			<script src="assets/js/intense.js"></script>
 
 	</body>
 </html>
