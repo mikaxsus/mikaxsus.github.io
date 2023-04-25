@@ -164,6 +164,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		font-size: 20px;
 	}
 
 	h1 {
@@ -2842,7 +2843,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 6em 0 0.1em 0 ;
 	}
 
 		#header .logo {
@@ -3340,3 +3341,85 @@ input, select, textarea {
 			}
 
 		}
+
+/* Darkmode */
+
+button.darkmode-toggle {
+	z-index: 3;
+}
+
+.darkmode--activated ul {
+    color: #bbb
+}
+
+.darkmode--activated a > p {
+	color: #fff
+}
+
+.darkmode--activated a.style1 {
+	filter: brightness(50%);
+}
+
+.darkmode--activated h1 {
+    color: #444
+}
+
+.darkmode--activated h2 {
+	color: #444
+}
+
+.darkmode--activated i {
+	color: #bbb
+}
+
+.darkmode--activated .tiles > article > h2 {
+	color: #fff
+}
+
+.darkmode--activated .animated-link h3:before {
+    background-color: #bbb
+}
+
+.darkmode--activated .animated-link h3 {
+    color: #fff
+}
+
+.darkmode--activated .tiles article > a h2 {
+	color: #bbb
+}
+
+.darkmode--activated a.icon {
+	color: #bbb
+}
+
+.darkmode--activated .tiles article.style1 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .tiles article.style2 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .tiles article.style3 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .tiles article.style4 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .tiles article.style5 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .tiles article.style6 > .image:before {
+	filter: brightness(50%)
+}
+
+.darkmode--activated .image.main {
+	filter: brightness(80%)
+}
+
+.darkmode--activated .intense {
+	filter: brightness(80%)
+}

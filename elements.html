@@ -6,11 +6,31 @@
 -->
 <html>
 	<head>
-		<title>Elements example</title>
+		<title>example site</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="favicon.png" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			function addDarkmodeWidget() {
+				const options = {
+					label: '🌓', // default: ''
+					buttonColorDark: '#000',
+					autoMatchOsTheme: true // default: true
+				}
+				new Darkmode(options).showWidget();
+			}			
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
