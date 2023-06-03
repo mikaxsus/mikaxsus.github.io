@@ -75,24 +75,61 @@
 								* A detective/point and click adventure game that shifts between 1st/3rd person view about a detective and his partner hamster solving "The Big Murder" in a village, and
 								* A FPS game where you are the embodiment of rage, a soldier cast in the fires of war, who speaks only the language of destruction.</p>
 							<p>After careful deliberation and several talks with our friends at M3DS, we decided to focus on on the 3rd game, the FPS game. We started to weigh down the mechanics and which elements go where, slowly removing certain elements and adding others.</p>
-							<p>We decided to start looking at the current most highly praised FPS games and build an idea of what we'd like to work on. Taking inspiration from a plethora of games such as: Ultrakill, Doom, Quake, Titanfall 2, Amid Evil, Into the Pit, CodeSpells, Magicka and many more, including drawing major inspiration from Avatar: The Last Airbender, we finally found our middle ground. A FPS game focused on 4 types of magic for combat (or maybe more in the future), the way the player interacted with them and with the environment, as well as giving the player a more responsive and much more flexible movement system to go along with it. A better breakdown would be to think of it as a game as fast as Quake, with the magic combining principles of Magicka and the casting system of Skyrim.</p>
-							<p>Basic movement includes: WASD fast paced movement, Jumping with double jumps, a slide, wall running with a small timer for wall latching and a dash.
+							<p>We started looking at the current most highly praised FPS games and build a plan of what we'd like to work on. Taking inspiration from a plethora of games such as: Ultrakill, Doom, Quake, Titanfall 2, Amid Evil, Into the Pit, CodeSpells, Magicka and many more, including drawing major inspiration from Avatar: The Last Airbender, we finally found our gem. 
+							A FPS game focused on 4 types of magic for combat (or maybe more in the future), the way the player interacted with them and with the environment, as well as giving the player a more responsive and much more flexible movement system to go along with it. A better breakdown would be to think of it as a game as fast as Quake, with the magic combining principles of Magicka and the casting system of Skyrim.</p>
+							<p>Basic movement includes: WASD fast paced movement, Jumping/double jump, sliding, wall running/latching and dashing.
 							For the combat system, we decided to use up to 4 types of magic: Fire, Water, Earth and Wind. Each magic has its own unique properties:
 								* Fire is combat oriented, utilizing a fireball, a sticky bomb and a flamethrower,
 								* Wind is combat oriented with a twist on crowd control, utilizing a FoV push, hitscan vacuum and a 360' push,
 								* Water is a split 50/50 on combat and movement, utilizing a water wave, a long shot laser and a grappling hook,
 								* Earth follows in the steps of Water and utilizes a giant boulder, ground spikes for knockup and AoD launch pad style knockup.</p>
-							<p>As our project evolves, I'll continue posting WIP pictures. The deadline is 31st May.</p>
-							<p><a href="https://drive.google.com/file/d/1Dx7pIg1uO1CQz81J9I6wzaCOdNUACxjq/preview">Link to a presentation video of the Project</a></p>
+							<p>As of June 1st 2023, the development cycle for our entry for the Rookies Festival 2023 has ended. The end product is a video of the story and mechanics we developed. The video is split in 2 segments: Story and gameplay.</p>
+
+							<p>The story focuses on The Queen and her lust to create an endless utopia for her people. Her idea is to unite the world under one nation to achieve this goal. 
+							Her source of power is the Creation Crystal, an ancient artifact brimming with powers that focus on controlling 4 elements: Fire, Water, Air and Ground. 
+							During one of her conquests, a prominent and high ranking general - our main character/The Revenant, snaps and goes on a rampage as his hatred for the Queen grants him the title of "The Emodiment of Rage". 
+							His success in stealing the artifact grants him the same elemental abilities the Queen had, making him an unstoppable force on the frontlines. 
+							He organizes and leads the rebelion against her army with the intent to overthrow her rule. In the midst of it all, he gets struck down by unknown means and vanishes alongside the artifact.
+							In the end, the Queen vows to find the artifact and snap the neck of the traitor for defying her will.</p>
+
+							<p>The gameplay ended up focusing on the movement and combat system that was created for the project. I fully utilized blueprints to achieve this and to simplify most of the modifications I had to do to the movement component (although I plan on reworking the entire system with C++ and Kismet later on). 
+							The movement is heavily based on Titanfall 2 and Ultrakill as they employ most of the mechanics we wanted, since most of these mechanics are also present in other games we took inspiration from.</p>
+
+							<p><a href="https://www.youtube.com/watch?v=OOshHaARe8g">Video presentation - Movement</a></p>
+
+							<p>The combat is a unique blend of present shooter mechanics (projectile and hitscan weaponry) imbued with the magic system from Magicka, where you can combine several elements to create an Ultimate, which you can trigger once you have the proper skills listed in the visual stack. You have your primary 4 elements which have individual mechanics and the ultimate which you can cast once every X seconds (at the moment the cooldown is 4.5s).</p>
+
+							<p><a href="https://www.youtube.com/watch?v=PaIJP5ZssBo">Video presentation - Water</a></p>
+							<p><a href="https://www.youtube.com/watch?v=-6lBB3U4IFg">Video presentation - Fire</a></p>
+							<p><a href="https://www.youtube.com/watch?v=-6ziMAL1k54">Video presentation - Wind</a></p>
+							<p><a href="https://www.youtube.com/watch?v=A5lFBCAKFFo">Video presentation - Ultimates</a></p>
+
+							<p>Further details about the project have been noted in the Rookies Festival 2023 entry. I'm proud of this one.</p>
+
+							<p><a href="https://www.youtube.com/watch?v=gL86MrkdxAA">Link to a presentation video of the Project</a></p>
+							<p><a href="https://www.therookies.co/entries/26132">Link to the Rookies Festival 2023 Entry</a></p>
 
 							<div class="row gtr-uniform">
 								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(1).png" data-title="Main Character render ideas" alt="" /></span></div>
 								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(2).png" data-title="Main Character render ideas" alt="" /></span></div>
 								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(3).png" data-title="Main Character render ideas" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(4).png" data-title="Main Character final render" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(5).png" data-title="Minion enemy render" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(4).png" data-title="Rendered character - MC Final" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(5).png" data-title="Rendered character - Minion" alt="" /></span></div>
 								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(6).png" data-title="Small enemy idea" alt="" /></span></div>
 								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(7).png" data-title="Small enemy render without legs" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(9).png" data-title="Rendered scene - The Creation Crystal" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(10).png" data-title="Rendered scene - Tranquil Garden" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(11).png" data-title="Rendered scene - Spiral tower" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(12).png" data-title="Rendered scene - Ending portal" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(13).png" data-title="Rendered characters - Guardians (Medium enemy)" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(14).png" data-title="Rendered scene - Calm Utopia" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(15).png" data-title="Rendered character - MC/The Revenant" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(16).png" data-title="Rendered character - The Queen" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(17).png" data-title="Rendered scene - Waterfall" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(18).png" data-title="Rendered scene - Entryway" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(19).png" data-title="Rendered scene - Starting area" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-rookies-festival(20).png" data-title="Rendered scene - Splash screen/video segment" alt="" /></span></div>
+								
 							</div>
 						</div>
 					</div>
