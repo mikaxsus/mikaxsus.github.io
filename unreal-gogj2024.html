@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Galactic Omnivore GameJam 2024</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="favicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			function addDarkmodeWidget() {
+				const options = {
+					label: '🌓', // default: ''
+					buttonColorDark: '#000',
+					autoMatchOsTheme: true // default: true
+				}
+				new Darkmode(options).showWidget();
+			}			
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
+	</head>
+
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="blender.html">Blender projects</a></li>
+							<li><a href="unreal-horror-game.html">Unreal Engine VR Horror game concept</a></li>
+							<li><a href="unreal-vr.html">Unreal Engine VR - Thesis</a></li>
+							<li><a href="unreal-game.html">Hack&Slash game concept</a></li>
+							<li><a href="unreal-gdht22.html">GDHT 2022 GraviGopnik</a></li>
+							<li><a href="unreal-uesp-course.html">M3DS - UESP Course Showcase</a></li>
+							<li><a href="unreal-rookies-festival.html">Rookies Festival 2023 Entry</a></li>
+							<li><a href="unreal-tiki-tandems.html">Tiki Tandems</a></li>
+							<li><a href="unreal-ggj2024.html">GGJ2024 - OhGreatHeavens!</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Neon Rebellion</h1>
+							<span class="image main"><img src="./images/unreal-neon-reb-(10).jpg" alt="" /></span>
+								<p>This was an experience and a half. A local gamedev company known for 2D Table top games, Galactic Omnivore, decided to host their own Regional GameJam with the theme: Space.</p>
+								<p>We were given a good chunk of time to make our game. In comparison, the GlobalGameJam is limited to 48hrs, while this Regional GameJam was initially 2 weeks, then extended to a month and a half. <a href="https://itch.io/jam/gogamejam2024">Link to the Regional GameJam 2024</a></p>
+								<p>To give better context; This GameJam was actually a series of events promoting Gaming Development culture in our country. The event was split into 6 segments, each promoting a different part of game development: Game Design, 2D Concept Art Design, Sound Design, Narrative Design, PCG and its use and Game Dev Basics in Unity. The events were well made and provided much needed information for younger/newer developers entering the GameDev scene.</p>
+								<p>The theme, as mentioned before, was Space. We had a lengthy discussion (I think it took us maybe 3-4 days to complete the idea?) and decided upon making a topdown arcade shooter that takes inspiration from various games (Galaga, SkyForce, Nier Automata's arcade stage was a big inspiration, etc.). Recreating a certain game-type from scratch seems easy at first, but once you start factoring in certain key elements, you start to see how deep logic goes.</p>
+								<p>Friend made the GDD for the game. TL;DR it dictated that we would have waves of enemies coming towards the player. Each wave would be used to learn the attack pattern of those enemy types. There would be 28 waves, each with varying styles of enemies and enemy positions. The enemies themselves are: <br>
+									* Kamikaze 	(Small drone, autolocks on player on spawn, always hunts player, forces player to move around) <br>
+									* Medium 	(Small/Medium drone, has fixed distance from player; uses spawn point as default position; Moves left-right and shoots at a fixed interval with slight variance (delay of point something seconds per fired projectile)) <br>
+									* Large 	(Big drone, same behavior as the Medium; Fired projectiles have bigger size than Medium) <br>
+									* Elite 	(Medium drone, spawns on the ends of the spawner, starts firing laser from spawn, moves to the other end of the spawner and stops firing when it reaches the end; repeat until dead) <br>
+									* Mines		(Medium drone, same behavior as the Medium; Fires mine projectiles that are inactive at first, move to a position on the screen and activate; Once the player reaches a mine, it explodes dealing damage) <br>
+									* Boss		(Biggest drone, size is around 10 times bigger than the player; Has multiple attacks (Spinning laser; Big projectile; Spawn enemies and go back, return when enemies die; etc.)) <br>
+								The game has 2 camera perspectives: TopDown and 3rd Person. Top down is just like any other arcade shooter: Top down camera + player is in a bottom area of the camera view. There is no restriction on movement, so you can get up-close and personal with enemies. The 3rd Person camera moves into position once a certain amount of waves are cleared and switches back to TopDown again after 4 waves pass.</p>
+								<p>The main mechanic of the game is that the player can move and shoot in a straight line and has special "Powered up" waves. During the usual phase, you can fire projectiles in a straight line and move around the map while shooting at enemies, being shot at by enemies and being tracked by the Kamikaze drones. During the Powered up waves, the camera moves to the 3rd Person perspective and you gain a melee swipe attack that doubles as a melee damage attack and as a fired wave projectile attack that goes through enemies and deals a good chunk of damage (In most cases it OHKOs enemies, Large enemies take 2 shots). After that wave, the camera moves back to the TopDown view and the melee attack is disabled.</p>
+								<p>At first, I had some example projects to use for this, but after testing them all out, I ultimately decided on making the system from scratch. I already had a whole damage system prepared from a previous project, so that was implemented first. The character and enemies share the same parent class and have the damage logic applied. Each enemy has its own gameplay logic routed.</p>
+								<p>The player takes damage and each projectile/drone deal various amounts of damage. Each damage output is balanced enough for the player to finish the game and as an added bonus the player's HP regenerate after each wave. We also added the option to disable this in a difficulty setting (No, Partial and Full HP regeneration).</p>
+								<p>We also had a good chunk of our friends and random people from various discord servers test out our game. While some did have issues with the difficulty, especially when the Powered-up phase came, they still managed to finish the game. Sadly, most were dissapointed that we didn't add the Boss as a mechanic, but this was cut due to the time constraint being changed constantly. And that was probably our biggest flaw; The fact that the time required to finish the game was constantly pushed meant we could focus on refining certain finished aspects of the game instead of having to add new logic/ideas. Regardless, in the end we managed to push out a very well made gamejam project.</p>
+								<a href="https://bomko.itch.io/neon-rebellion">Neon Rebellion</a><br>
+								<a href="https://pitch.com/public/dfc9cbab-1196-41bb-abfc-5ac432aec27f">Link of the written presentation for the Demo</a>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(10).jpg" data-title="In-game screenshot - Main menu" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(2).png" data-title="In-game screenshot" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(3).png" data-title="In-game screenshot" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(4).png" data-title="In-game screenshot" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(5).png" data-title="In-game screenshot" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(6).png" data-title="In-game screenshot - Boss cinematic" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(7).jpg" data-title="In-game screenshot - Game Over screen" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(8).jpg" data-title="Splash screen" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-neon-reb-(9).jpg" data-title="In-engine screenshot - Main level" data-caption="PCG + Limited player area + background assets, had a fine time optimizing this since not everything appears in the profiler in a higher end pc haaa..." alt="" /></span></div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/mikaxsus" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/mihail-danilovski/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.artstation.com/mihail141" class="icon brands style2 fa-artstation"><span class="label">ArtStation</span></a></li>
+									<li><a href="mailto:mihaildanilovski@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.js"></script>
+			
+	</body>
+</html>

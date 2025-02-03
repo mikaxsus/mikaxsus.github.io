@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tiki Tandems - PvP Multiplayer/Couch/Party</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="favicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			function addDarkmodeWidget() {
+				const options = {
+					label: '🌓', // default: ''
+					buttonColorDark: '#000',
+					autoMatchOsTheme: true // default: true
+				}
+				new Darkmode(options).showWidget();
+			}			
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
+	</head>
+
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="unreal-horror-game.html">Unreal Engine VR Horror game concept</a></li>
+							<li><a href="unreal-vr.html">Unreal Engine VR - Thesis</a></li>
+							<li><a href="unreal-game.html">Hack&Slash game concept</a></li>
+							<li><a href="blender.html">Blender projects</a></li>
+							<li><a href="unreal-uesp-course.html">M3DS - UESP Course Showcase</a></li>
+							<li><a href="unreal-rookies-festival.html">Rookies Festival 2023 Entry</a></li>
+							<li><a href="unreal-ggj2024.html">GGJ2024 - OhGreatHeavens!</a></li>
+							<li><a href="unreal-mozok.html">Mozok VR LMS</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Tiki Tandems - 1v1 Couch'd</h1>
+							<span class="image main"><img src="./images/unreal-tiki-tandems-(1).png" alt="" style="height: auto;"/></span>
+							<p>This was a journey and a half for me. I've mentioned M3DS here before; An indie gamedev/academy that teaches various development cycles (Mainly for 3D artists, non/organics, Scene renders and 1 year is reserved for Game Development).</p>
+							<p>I've personally known some of the people working there and I was contacted to join their team to help with development on their internally developed video game titled Tiki Tandems. To be more specific, I was to help with developing the multiplayer system for the game. I've also been tasked with aiding the team help students in need, that have issues with their projects, specifically for Unreal Engine related issues.</p>
+							<p>It was a big challenge for me. I've had tinkered with network connectivity and both the EOS/Steamworks APIs before, but never on this scale. From the initial planning phase, what we could conclude was the following: The project itself had to be rewritten to make up for the lack of replication (with this comes optimization, bug-fixes, etc.) and we had to create a plan for the release of the game on multiple platforms (Add a tutorial level, new character, skins, achievements, etc.).</p>
+							<p>The first part was the rewrite. Since the assets remain the same, we had half of the team work on new assets for the game (New UI elements, the new characters design and combat idea, concept art, fonts, etc.) and the other half work on rewriting the entire codebase with multiplayer in mind.</p>
+							<p>While the rewrite was in-progress, our part of the team was tasked with remaking the GameDev Academic year to account for the new changes and adding the multiplayer segment as part of the studies. I've never actually recorded classes or videos of the sorts before, so it was a fun new experience for me.</p>
+							<p>Unreal Engine is very multiplayer friendly, you'd be surprised. Making actors multiplayer-ready is as simple as turning on a few switches, but making them work properly is a whole different story. To spare you the details, all of the multiplayer logic that is required to make 2 actors talk between themselves "properly" lies within the engine itself, but outside of the Blueprints system. For this, we had to write a plugin in C++ that enables multiplayer crossplay and implements the various systems that both Epic and Steam work with.</p>
+							<p>Thankfully, Epic and Steam had detailed documentation for implementing the various systems they have, so it wasn't that hard to implement their systems in our game. We've implemented an authentication system, achievements, online save-game sync and crossplay capability. We wanted to implement voice/text chat, but considering we were targeting multiple platforms at once, we nixed the idea for the time being.</p>
+							<p>While we were nearing the completion of the project, the Rookies 2024 competition was starting yet again and we decided to use the game as an entree: <a href="https://www.therookies.co/entries/28530">Tiki Tandems</a><br></p>
+							<p>With the project completed and the game officially released on both Steam and Epic's Store, we had a small release party prepared where we had a small presentation about the development of the game, as well as several booths where you could come and try out the game yourself. Here are the links to both the Steam and Epic releases: <a href="https://store.steampowered.com/app/2569780/Tiki_Tandems/">Tiki Tandems - Steam</a> and <a href="https://store.epicgames.com/en-US/p/eos_tikitandemstest-f3dbe7">Tiki Tandems - Epic</a><br></p>
+							<p>After finishing the project, I moved onto creating an AI system using Unreal's AI system for NPCs for an internal project that's still ongoing, but due to leaving the company I cannot divulge any further details.</p>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(2).jpg" data-title="In-game screenshot - Profile" data-caption="Profile screen where you can change character skins and check stats" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(3).jpg" data-title="In-game  screenshot - Character selection screen" data-caption="Character selection screen showing 2 players" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(4).jpg" data-title="Engine screenshot - Day arena map design" data-caption="One of the 2 options for the arena map" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(5).jpg" data-title="Engine screenshot - Night arena map design" data-caption="The 2nd option for the arena map" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(6).jpg" data-title="Engine screenshot - Character Training level" data-caption="This is the training map where you can learn how to play the game" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(7).jpg" data-title="In-game screenshot - Main menu" data-caption="Level in the background is actually the initial idea for the main menu: each rock has a button that takes you to a different camera with a menu (Settings, Play, etc.)" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(8).jpg" data-title="In-game screenshot - Night arena" data-caption="Night arena Magicman vs Bonkerman" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(9).jpg" data-title="In-game screenshot - Character selection in the Training Grounds" data-caption="" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(10).jpg" data-title="In-game screenshot - Training Grounds starting area" data-caption="You start off from here, top left you have the current 'quest' shown so that the player knows in which segment they are" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-tiki-tandems-(11).jpg" data-title="In-game screenshot - Character Selection screen" data-caption="" alt="" /></span></div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/mikaxsus" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/mihail-danilovski/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.artstation.com/mihail141" class="icon brands style2 fa-artstation"><span class="label">ArtStation</span></a></li>
+									<li><a href="mailto:mihaildanilovski@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.js"></script>
+			
+	</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mozok - Moonhub + Internal LMS VR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="favicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			window.onload = function() {
+				// Intensify all images on the page.
+				var elements = document.querySelectorAll( '.intense' );
+				Intense( elements );
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			function addDarkmodeWidget() {
+				const options = {
+					label: '🌓', // default: ''
+					buttonColorDark: '#000',
+					autoMatchOsTheme: true // default: true
+				}
+				new Darkmode(options).showWidget();
+			}			
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
+	</head>
+
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="blender.html">Blender projects</a></li>
+							<li><a href="unreal-horror-game.html">Unreal Engine VR Horror game concept</a></li>
+							<li><a href="unreal-vr.html">Unreal Engine VR - Thesis</a></li>
+							<li><a href="unreal-game.html">Hack&Slash game concept</a></li>
+							<li><a href="unreal-gdht22.html">GDHT 2022 GraviGopnik</a></li>
+							<li><a href="unreal-uesp-course.html">M3DS - UESP Course Showcase</a></li>
+							<li><a href="unreal-rookies-festival.html">Rookies Festival 2023 Entry</a></li>
+							<li><a href="unreal-tiki-tandems.html">Tiki Tandems</a></li>
+							<li><a href="unreal-ggj2024.html">GGJ2024 - OhGreatHeavens!</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Mozok</h1>
+							<span class="image main"><img src="./images/unreal-mozok-vr-(1).png" alt="" /></span>
+								<p>Mozok was an interesting experience since I had the opportunity to work in Unity again (I've done a bit of QA here and there in Unity, but nothing outside of basic testing). I was hired to do work on 2 separate projects: Moonhub's VR LMS in Unity and Mozok's VR LMS in Unreal.</p>
+								<p>Moonhub's idea for an LMS was very interesting. Not very hard to replicate in either engines and it's flexible enough to run on various VR devices. I was put on their team with another coworker to rework their Authentication method and implement it in Unity with VR interaction logic enabled.</p>
+								<p>Unity wasn't much of an issue, but learning and implementing a new OTP based authentication alongside their current one was a challenge. I've implemented the authentication method with a new UI element and changed their current keyboard method to a new one.</p>
+								<p>Once we were done with that, I was given the task to implement an Offline mode method in the game (as to enable users to use their product even if there is no internet connection). The method was simple to implement: I took the most recent data that was saved locally, used it to display only the locally saved assets and locked out using any not downloaded assets. Any additional security features were implemented alongside to prevent users from abusing existing data indefinetely. Visual pointers and the menu were codesigned and implemented by myself.</p>
+
+								<div class="row gtr-uniform">
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(1).png" data-title="Authentication method - OTP" data-caption="" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(2).png" data-title="Keyboard implementation using OpenXR's default keyboard method" data-caption="Keyboard design changes depending on state machine (Numeric/AlphaNumeric/etc. depending on use, was made intentionally with those choices available for later use in the game)" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(3).png" data-title="Authentication method - OTP" data-caption="" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(4).png" data-title="Authentication method - OTP" data-caption="" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(5).png" data-title="Main menu - Offline method design implementation" data-caption="Changes depending on state machine" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(6).png" data-title="Stats menu - Offline method design implementation" data-caption="Changes depending on state machine" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(7).png" data-title="Settings menu - Offline method menu design implementation" data-caption="Changes depending on state machine" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(8).gif" data-title="Authentication method - OTP" data-caption="" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(9).jpg" data-title="Authentication method - OTP (Unreal implementation)" data-caption="" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-moonhub-vr-(10).png" data-title="Authentication method - OTP (Unreal implementation)" data-caption="" alt="" /></span></div>
+								</div><br>
+
+								<p>Mozok's LMS in Unreal was pitched to me as an idea by the CEO, as a way to revolutionize learning in VR. It was to be made into a hub for learning. The main idea was to have "Worlds" (Various levels) where players could gather and be taught various skills. For example; Programming any language would have a world where you could sit in an amphitheatre being taught by a professor, or a cafe where you could sit in a huddle with 4-5 other players, etc. I was put in charge of roadmapping the entire VR segment: creating the GDD, outlining product roadmap phases, strategizing and prioritizing in-game segments for client presentations, programming in-game logic, assets search and use on FAB/Unreal Marketplace/Custom, Level and Gameplay design and etc.</p>
+								<p>Initial planning would focus on 3-4 levels of varying designs. Since our main focus was to cater to universities/proper academic studies, I decided it would be good to display existing areas of our faculty translated to a 3D space with the feeling like you're there in real life. The idea was to give creative freedom to existing areas in real life, as to make studying a bit more interactive than your usual "Raise your hand to ask a question". For example; I planned a feature where you could use a radial menu with various tools to interact with the environment: an Emote system, a Toolbox (Key interactive elements that change per study type/level, like a marker/pen, paper, etc.), generalized key elements (Various actors required per level to make the feeling of being in that level more realistic like manual lights, a screen projector, various seats/chairs, etc.), a simple multiplayer system that's device agnostic (Initially it would rely on Steamworks for testing since it's the easiest to setup and then I planned on moving it to our own custom auth method with 2FA on the website and OTP in-game and our own server hosting) and, potentially, port the project to multiple devices (MetaXR, VisionOS, Pico, etc.). <br>
+								<a href="https://drive.google.com/file/d/16VEzuIU3vR2qU0FUIIEA4smkXI7wMR2t/view?usp=drive_link">Link of the demo presentation video of the levels in ManaVR</a></p>
+								
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(1).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(2).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(3).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(4).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(5).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(6).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(7).png" data-title="Level interior - OpenOffice" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(8).png" data-title="Level interior - Laboratory2" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(9).png" data-title="Level interior - Laboratory2" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(10).png" data-title="Level interior - Laboratory1" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(11).png" data-title="Level interior - Laboratory1" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(12).png" data-title="Level interior - Laboratory1" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img class="intense" src="./images/unreal-mozok-vr-(13).png" data-title="Level interior - Laboratory3" data-caption="Render of the interior design for the studying huddle zones" alt="" /></span></div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/mikaxsus" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/mihail-danilovski/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.artstation.com/mihail141" class="icon brands style2 fa-artstation"><span class="label">ArtStation</span></a></li>
+									<li><a href="mailto:mihaildanilovski@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/intense.js"></script>
+			
+	</body>
+</html>
